@@ -1,0 +1,19 @@
+{
+  "name": "hil-ristorante-v2",
+  "version": "1.0.0",
+  "description": "This is a hil ristorante v2 directory to learn Bootstrap 4",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/embunadem/hil-ristorante.git"
+  },
+  "author": "Hilmy Fadhila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/embunadem/hil-ristorante/issues"
+  },
+  "homepage": "https://gitlab.com/embunadem/hil-ristorante#readme"
+}
