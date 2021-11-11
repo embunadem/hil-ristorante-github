@@ -11,7 +11,7 @@
 }
 
 .footer{
-    background-color: #2F86A6;
+    background-color: #43a2c5;
     margin: 0px auto;
     padding: 20px 0px 20px;
     color: whitesmoke;
@@ -20,7 +20,7 @@
 .jumbotron{
     padding: 70px 30px 70px 30px;
     margin: 0px auto;
-    background: cornflowerblue;
+    background: #2588ac;
     color: floralwhite;
 }
 
@@ -35,6 +35,6 @@ body{
     z-index: 0;
 }
 
-/* .navbar-dark{
-    background-color: #512DA8;
-} */
+.navbar-dark{
+    background-color: #2588ac;
+}
