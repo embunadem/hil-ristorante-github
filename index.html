@@ -114,6 +114,81 @@
         </div>
     </div>
 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="firstname" class="col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-md-10">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn active">
+                                        <input type="radio" name="nbPeople" value="1" autocomplete="off" checked> 1
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="2" autocomplete="off"> 2
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="3" autocomplete="off"> 3
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="4" autocomplete="off"> 4
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="5" autocomplete="off"> 5
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="6" autocomplete="off"> 6
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="section" class="col-md-2 col-form-label">Section</label>
+                            <div class="col-md-4">
+                                <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-success active">
+                                    <input type="radio" name="section" value="nonsmoking" autocomplete="off" checked> Non-Smoking
+                                  </label>
+                                  <label class="btn btn-danger">
+                                    <input type="radio" name="section" value="smoking" autocomplete="off"> Smoking
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lastname" class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                    <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                    <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -127,16 +202,24 @@
                 </div>
                 
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block btn-sm btn-warning"
+                    <!-- tooltip -->
+                    <!-- <a role="button" class="btn btn-block btn-sm btn-warning"
                         data-toggle="tooltip" data-html="true" title="Or Call Us at <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reservationForm">
                         <h6>
                             Reserve Table
                         </h6>
-                    </a>
+                    </a> -->
+                    <!-- popover -->
                     <!-- <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" 
                         data-content="Hello Popover on bottom.">Popover on bottom
                     </button> -->
+                    
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">
+                        <h6>
+                            Reserve Table
+                        </h6>
+                    </a>
                 </div>
             </div>
         </div>
@@ -409,11 +492,11 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- tooltip reason -->
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script> -->
     <!-- popover reason -->
     <!-- <script>
         $('[data-toggle="popover"]').popover()
